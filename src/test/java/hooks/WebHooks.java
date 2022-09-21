@@ -26,6 +26,7 @@ public class WebHooks {
         AutorizeSteps.autorize();
         MainPageSteps.openProject();
         ProjectPageSteps.getTasksCount();
+        ProjectPageSteps.testSeleniumBug();
     }
 
 }

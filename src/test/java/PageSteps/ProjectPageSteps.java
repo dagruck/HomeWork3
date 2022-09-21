@@ -18,7 +18,7 @@ public class ProjectPageSteps {
     }
     public static void testSeleniumBug() {
         allTasksAndFilters.shouldBe(Condition.visible).click();
-        inputNameTask.shouldBe(Condition.visible).sendKeys("testname");
+        inputNameTask.shouldBe(Condition.visible).sendKeys("TestSelenium_bug");
         searchButton.click();
         sleep(5000);
 
