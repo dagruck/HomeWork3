@@ -5,7 +5,6 @@ import io.qameta.allure.Step;
 
 import static PageObject.PageElements.AutorizePage.*;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
 import static utils.Configuration.getConfigurationValue;
 
 public class AutorizeSteps {
