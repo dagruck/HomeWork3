@@ -60,9 +60,11 @@ public class ProjectPageSteps {
         labelTask.sendKeys("sonnov_test");
         labelTask.pressEnter();
         textEnvironment.sendKeys("Windows 10  Google chrome Версия 101.0.4951.67 (Официальная сборка), (64 бит) Сайт открыт по ссылке : * http://shop.findbug.ru/*");
+        sleep(2000);
         sunkVersion.click();
         task.sendKeys("TEST-21967");
         task.pressEnter();
+        sleep(2000);
         sprint.sendKeys("1");
         sprint.pressEnter();
         create.click();
