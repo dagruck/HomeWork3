@@ -1,16 +1,29 @@
 package PageSteps;
+
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static PageObject.PageElements.ProjectPage.pageTasks;
-import static PageObject.PageElements.ProjectPage.pagesCountElem;
+import static PageObject.PageElements.ProjectPage.*;
+import static com.codeborne.selenide.Selenide.sleep;
+
 public class ProjectPageSteps {
-    @Step("Находим общее количество задач")
+    @Step("Р’С‹РїРѕР»РЅСЏРµРј Р·Р°РґР°РЅРёСЏ")
     public static void getTasksCount() {
-        pageTasks.click();
-      //pagesCountElem.shouldBe(Condition.visible);
+        //pageTasks.click();
+        SelenideElement selenideElement = pagesCountElem.shouldBe(Condition.visible);
         String count = pagesCountElem.getOwnText();
         System.out.println("Here we have " + count.split(" ")[2] + " tasks.");
-        //Разобраться с кодировкой
+        //Р Р°Р·РѕР±СЂР°С‚СЊСЃСЏ СЃ РєРѕРґРёСЂРѕРІРєРѕР№
+    }
+    public static void testSeleniumBug() {
+        allTasksAndFilters.shouldBe(Condition.visible).click();
+        inputNameTask.shouldBe(Condition.visible).sendKeys("testname");
+        searchButton.click();
+        sleep(5000);
+
     }
 }
+
+//public static SelenideElement allTasksAndFilters = $x("//a[contains(text(),'РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ Р·Р°РґР°С‡Рё Рё С„РёР»СЊС‚СЂС‹')]");
+//    public static SelenideElement inputNameTask = $x("//input[@class='search-entry text medium-field ajs-dirty-warning-exempt']");

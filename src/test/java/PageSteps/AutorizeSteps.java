@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static utils.Configuration.getConfigurationValue;
 
 public class AutorizeSteps {
-    @Step("Открываем страницу по ссылке {eduUrl}")
+    @Step("РџСЂРѕРІРµРґРµРј Р°РІС‚РѕСЂРёР·Р°С†РёСЋ {eduUrl}")
     public static void openUrl(String eduUrl) {
         open(eduUrl);
     }
@@ -17,9 +17,7 @@ public static void autorize(){
     loginLane.shouldBe(Condition.visible).sendKeys(getConfigurationValue("login"));
     passwordLane.sendKeys(getConfigurationValue("password"));
     loginButton.click();
-    sleep(3000);
 }
-// Переходим в проект Test
 
 
 }

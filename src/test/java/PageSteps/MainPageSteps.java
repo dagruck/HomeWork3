@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static utils.Configuration.getConfigurationValue;
 
 public class MainPageSteps {
-    @Step("Переходим в проект Тест")
+    @Step("Р—Р°С…РѕРґРёРј РІ РїСЂРѕРµРєС‚")
     public static void openProject(){
         projectsMenuButton.shouldBe(Condition.visible).click();
         projectTestLink.shouldBe(Condition.visible).click();
         //sleep(5000);
     }
-// Переходим в проект Test
+//  @Test
     //public static SelenideElement projectsMenuButton = $x("//a[@id='browse_link']");
     //    public static SelenideElement projectTestLink = $x("//a[contains(text(), 'Test (TEST)')]");
 
