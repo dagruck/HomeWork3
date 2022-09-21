@@ -17,6 +17,7 @@ public static void autorize(){
     loginLane.shouldBe(Condition.visible).sendKeys(getConfigurationValue("login"));
     passwordLane.sendKeys(getConfigurationValue("password"));
     loginButton.click();
+    welcome.shouldHave(Condition.text("Добро пожаловать в Jira"));
 }
 
 

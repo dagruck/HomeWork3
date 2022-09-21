@@ -20,6 +20,8 @@ public class ProjectPageSteps {
         allTasksAndFilters.shouldBe(Condition.visible).click();
         inputNameTask.shouldBe(Condition.visible).sendKeys("TestSelenium_bug");
         searchButton.click();
+        assertStatus.shouldHave(Condition.text("Сделать"));
+        assertVersion.shouldHave(Condition.text("Version 2.0"));
         sleep(5000);
 
     }
