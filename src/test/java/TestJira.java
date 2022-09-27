@@ -8,7 +8,7 @@ import static PageSteps.ProjectPageSteps.getTasksCount;
 import static PageSteps.ProjectPageSteps.testSeleniumBug;
 import static utils.Configuration.getConfigurationValue;
 
-public class Tests extends WebHooks {
+public class TestJira extends WebHooks {
 
     @Test
     public void Test(){
