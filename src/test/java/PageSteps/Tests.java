@@ -1,4 +1,7 @@
+package PageSteps;
+
 import hooks.WebHooks;
+import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Test;
 
 import static PageSteps.AutorizeSteps.autorize;
@@ -8,14 +11,23 @@ import static PageSteps.ProjectPageSteps.getTasksCount;
 import static PageSteps.ProjectPageSteps.testSeleniumBug;
 import static utils.Configuration.getConfigurationValue;
 
-public class TestJira extends WebHooks {
-
-    @Test
-    public void Test(){
+public class Tests extends WebHooks {
+@Test
+    @Then("Ввести логин и пароль")
+    public void autorization() {
         openUrl(getConfigurationValue("eduUrl"));
         autorize();
+    }
+    @Then("Открыть объект")
+    public void project() {
         openProject();
+    }
+    @Then("Вывести в консоль количество задач")
+    public void tasks() {
         getTasksCount();
+    }
+    @Then("Выполняем тесты")
+    public void test() {
         testSeleniumBug();
     }
 }

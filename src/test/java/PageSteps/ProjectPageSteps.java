@@ -70,10 +70,13 @@ public class ProjectPageSteps {
         create.click();
         myTask.click();
         statusInWork.click();
+        sleep(1000);
         businessProcess.click();
+        sleep(1000);
         statusWin.click();
+        sleep(1000);
         getAssertStatusMyTask.shouldHave(Condition.text("Готово"));
-        sleep(5000);
+        sleep(3000);
 
     }
 }
