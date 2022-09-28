@@ -1,6 +1,5 @@
 package PageSteps;
 
-import hooks.WebHooks;
 import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,7 @@ import static PageSteps.ProjectPageSteps.getTasksCount;
 import static PageSteps.ProjectPageSteps.testSeleniumBug;
 import static utils.Configuration.getConfigurationValue;
 
-public class Tests extends WebHooks {
+public class Tests {
 @Test
     @Then("Ввести логин и пароль")
     public void autorization() {

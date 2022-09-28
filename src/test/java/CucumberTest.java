@@ -1,3 +1,4 @@
+import hooks.WebHooks;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -8,5 +9,5 @@ import org.junit.runner.RunWith;
         glue = {"hooks", "PageSteps"},
         tags = "@homeWorkCucumber"
 )
-public class CucumberTest {
+public class CucumberTest extends WebHooks {
 }
