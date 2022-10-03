@@ -2,6 +2,7 @@ package PageSteps;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.cucumber.java.en.Then;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class ProjectPageSteps {
     @Step("Выполняем задания")
+    @Then("Вывести в консоль количество задач")
     public static void getTasksCount() {
         //pageTasks.click();
         SelenideElement selenideElement = pagesCountElem.shouldBe(Condition.visible);
