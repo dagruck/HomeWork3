@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"Hooks", "PageSteps", "Hooks","PageElements"},
+        glue = {"hooks", "PageSteps", "hooks","PageElements"},
         tags = "@homeWorkCucumber"
 )
 public class CucumberTest {

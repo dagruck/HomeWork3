@@ -1,4 +1,4 @@
-package Hooks;
+package hooks;
 
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.Before;
